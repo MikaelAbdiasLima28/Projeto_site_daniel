@@ -1,0 +1,105 @@
+.inicio {
+    height: 100vh;
+    background-color: #F57F29;
+    color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+hr {
+    width: 100%;
+    border-color: black;
+    background-color: black;
+    color: black;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.cabecalho {
+    display: flex;
+    gap: 40vw;
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecalho h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    color: black;
+}
+
+.cabecalho p {
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.cabecalho strong {
+    font-weight: bold;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.banner .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    max-width: 60%;
+    gap: 1rem;
+}
+
+.banner .texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.banner .texto h1 {
+    display: flex;
+    font-family: "Oswald", sans-serif;
+    color: black;
+    font-size: 4rem;
+    flex-wrap: wrap;
+}
+
+.banner .texto p {
+    font-family: "Oswald", sans-serif;
+    font-size: 1rem;
+    padding-bottom: 1.5rem;
+    color: black;
+}
+
+.banner .texto button {
+    padding: 12px 20px;
+    background-color: rgb(20, 119, 235);
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.banner .texto button:hover {
+    background-color: rgb(15, 100, 200);
+    transform: scale(1.05);
+}
+
+.banner .texto button:active {
+    background-color: rgb(10, 80, 180);
+    transform: scale(0.98);
+}
+
+
+.banner img{
+    width: 30%;
+}
