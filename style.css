@@ -1,6 +1,9 @@
-.inicio {
+body {
     height: 100vh;
     background-color: #F57F29;
+}
+
+.inicio {
     color: white;
     align-items: center;
     display: flex;
@@ -19,7 +22,7 @@ hr {
 
 .cabecalho {
     display: flex;
-    gap: 40vw;
+    gap: 20vw;
     padding: 1.5rem;
     justify-content: center;
     align-items: center;
@@ -40,6 +43,26 @@ hr {
 
 .cabecalho strong {
     font-weight: bold;
+}
+
+.btn-secondary {
+    --bs-btn-bg: rgb(20, 119, 235);
+    --bs-btn-hover-bg: rgb(15, 100, 200);
+    --bs-btn-active-bg: rgb(10, 80, 180);
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+    background-color: var(--bs-btn-active-bg);
+    border-color: var(--bs-btn-active-bg);
+}
+
+.btn:hover {
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-active-bg);
+}
+
+.dropdown {
+    font-family: "Oswald", sans-serif;
 }
 
 .banner {
