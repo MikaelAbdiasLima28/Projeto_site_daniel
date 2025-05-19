@@ -1,14 +1,18 @@
 body {
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
     background-color: #F57F29;
+    font-family: "Oswald", sans-serif; /* Adicionei globalmente para consistência */
 }
 
 .inicio {
-    color: white;
-    align-items: center;
+    flex: 1; /* Ocupa todo o espaço vertical disponível */
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
 }
 
 hr {
@@ -22,53 +26,69 @@ hr {
 
 .cabecalho {
     display: flex;
+    flex-direction: row;
+    background-color: black;
     gap: 20vw;
     padding: 1.5rem;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0; /* Evita que o cabeçalho encolha */
+}
+
+a{
+    text-decoration: none;
+    color: white;
 }
 
 .cabecalho h3 {
-    font-family: "Oswald", sans-serif;
     font-weight: 500;
     font-size: 2rem;
-    color: black;
+    color: rgb(255, 255, 255);
+    margin: 0; /* Remove margens padrão */
 }
 
 .cabecalho p {
-    font-family: "Oswald", sans-serif;
     font-weight: 400;
     font-size: 1rem;
+    color: rgb(255, 255, 255);
+    margin: 0; /* Remove margens padrão */
 }
 
 .cabecalho strong {
     font-weight: bold;
 }
 
-.btn-secondary {
-    --bs-btn-bg: rgb(20, 119, 235);
-    --bs-btn-hover-bg: rgb(15, 100, 200);
-    --bs-btn-active-bg: rgb(10, 80, 180);
+.menu ul {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margens padrão */
+    list-style: none; /* Remove bullets da lista */
 }
 
-.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
-    background-color: var(--bs-btn-active-bg);
-    border-color: var(--bs-btn-active-bg);
-}
-
-.btn:hover {
-    background-color: var(--bs-btn-hover-bg);
-    border-color: var(--bs-btn-active-bg);
-}
-
-.dropdown {
-    font-family: "Oswald", sans-serif;
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: black;
+    --bs-btn-border-color: black;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ffffff41;
+    --bs-btn-hover-border-color: #ffffff41;
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ffffff41;
+    --bs-btn-active-border-color: #ffffff41;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
 }
 
 .banner {
-    display: flex;
     width: 100%;
-    justify-content: center;
 }
 
 .banner .container {
@@ -77,27 +97,28 @@ hr {
     justify-content: center;
     box-sizing: border-box;
     max-width: 60%;
-    gap: 1rem;
+    gap: 3rem; /* Aumentei um pouco o gap para melhor espaçamento */
+    margin: 0 auto; /* Centralização adicional */
 }
 
 .banner .texto {
     display: flex;
     flex-direction: column;
+    flex: 1; /* Ocupa espaço disponível */
 }
 
 .banner .texto h1 {
-    display: flex;
-    font-family: "Oswald", sans-serif;
     color: black;
     font-size: 4rem;
-    flex-wrap: wrap;
+    margin: 0 0 1rem 0; /* Margem apenas na parte inferior */
+    line-height: 1.1; /* Melhora a legibilidade */
 }
 
 .banner .texto p {
-    font-family: "Oswald", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem; /* Aumentei levemente para melhor legibilidade */
     padding-bottom: 1.5rem;
     color: black;
+    margin: 0; /* Remove margens padrão */
 }
 
 .banner .texto button {
@@ -106,10 +127,10 @@ hr {
     border-radius: 8px;
     border: none;
     color: white;
-    font-family: "Oswald", sans-serif;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
+    width: fit-content; /* Ajusta ao conteúdo */
 }
 
 .banner .texto button:hover {
@@ -122,7 +143,8 @@ hr {
     transform: scale(0.98);
 }
 
-
-.banner img{
+.banner img {
     width: 30%;
+    max-width: 300px; /* Limita o tamanho máximo */
+    height: auto; /* Mantém a proporção */
 }
