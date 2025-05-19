@@ -4,11 +4,11 @@ body {
     min-height: 100vh;
     margin: 0;
     background-color: #F57F29;
-    font-family: "Oswald", sans-serif; /* Adicionei globalmente para consistência */
+    font-family: "Oswald", sans-serif;
 }
 
 .inicio {
-    flex: 1; /* Ocupa todo o espaço vertical disponível */
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,7 @@ hr {
     padding: 1.5rem;
     justify-content: center;
     align-items: center;
-    flex-shrink: 0; /* Evita que o cabeçalho encolha */
+    flex-shrink: 0;
 }
 
 a{
@@ -44,14 +44,14 @@ a{
     font-weight: 500;
     font-size: 2rem;
     color: rgb(255, 255, 255);
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
 }
 
 .cabecalho p {
     font-weight: 400;
     font-size: 1rem;
     color: rgb(255, 255, 255);
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
 }
 
 .cabecalho strong {
@@ -65,9 +65,9 @@ a{
     color: white;
     justify-content: center;
     align-items: center;
-    padding: 0; /* Remove padding padrão */
-    margin: 0; /* Remove margens padrão */
-    list-style: none; /* Remove bullets da lista */
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .btn-primary {
@@ -97,28 +97,28 @@ a{
     justify-content: center;
     box-sizing: border-box;
     max-width: 60%;
-    gap: 3rem; /* Aumentei um pouco o gap para melhor espaçamento */
-    margin: 0 auto; /* Centralização adicional */
+    gap: 3rem;
+    margin: 0 auto;
 }
 
 .banner .texto {
     display: flex;
     flex-direction: column;
-    flex: 1; /* Ocupa espaço disponível */
+    flex: 1;
 }
 
 .banner .texto h1 {
     color: black;
     font-size: 4rem;
-    margin: 0 0 1rem 0; /* Margem apenas na parte inferior */
-    line-height: 1.1; /* Melhora a legibilidade */
+    margin: 0 0 1rem 0;
+    line-height: 1.1;
 }
 
 .banner .texto p {
-    font-size: 1.2rem; /* Aumentei levemente para melhor legibilidade */
+    font-size: 1.2rem;
     padding-bottom: 1.5rem;
     color: black;
-    margin: 0; /* Remove margens padrão */
+    margin: 0;
 }
 
 .banner .texto button {
@@ -130,7 +130,7 @@ a{
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    width: fit-content; /* Ajusta ao conteúdo */
+    width: fit-content;
 }
 
 .banner .texto button:hover {
@@ -145,6 +145,6 @@ a{
 
 .banner img {
     width: 30%;
-    max-width: 300px; /* Limita o tamanho máximo */
-    height: auto; /* Mantém a proporção */
+    max-width: 300px;
+    height: auto;
 }
