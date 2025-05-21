@@ -3,7 +3,9 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    background-color: #F57F29;
+    background-image: url('img/back.png');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: "Oswald", sans-serif;
 }
 
@@ -101,6 +103,8 @@ a{
     margin: 0 auto;
 }
 
+
+
 .banner .texto {
     display: flex;
     flex-direction: column;
@@ -109,6 +113,7 @@ a{
 
 .banner .texto h1 {
     color: black;
+    text-shadow: 5px 2px 20px #ff7b00;
     font-size: 4rem;
     margin: 0 0 1rem 0;
     line-height: 1.1;
@@ -118,11 +123,18 @@ a{
     font-size: 1.2rem;
     padding-bottom: 1.5rem;
     color: black;
+    text-shadow: 5px 2px 20px #ff7b00;
     margin: 0;
+}
+
+.banner .texto a {
+    align-self: center;
+    padding-top: 20px;
 }
 
 .banner .texto button {
     padding: 12px 20px;
+    align-self: center;
     background-color: rgb(20, 119, 235);
     border-radius: 8px;
     border: none;
