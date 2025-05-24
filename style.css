@@ -198,3 +198,155 @@ a{
     display:inline-block;
     max-width: 10%;
 }
+
+/* pagamento */
+
+.venda, .pagina-agradecimento {
+  background-color: #ff922c;
+  font-family: sans-serif;
+}
+
+.mensagem-obrigado {
+  background-color: #ff922c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.mensagem-obrigado h2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  max-width: 600px;
+}
+
+.cabecalho {
+  background-color: #000;
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cabecalho h1 {
+  margin: 0;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.formulario {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.form-campos {
+  flex: 1;
+  max-width: 500px;
+}
+
+.form-campos h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.formulario label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+.pagamento {
+  margin-top: 15px;
+}
+
+.linha-cartao {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.preco-box {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.preco-box h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.preco-box p {
+  color: red;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.btn-comprar {
+  background-color: #00c853;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.pagamento-titulo {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.radio-label {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #00c853; /* cor verde personalizada */
+  margin-right: 8px;
+  transform: scale(1.2);
+}
