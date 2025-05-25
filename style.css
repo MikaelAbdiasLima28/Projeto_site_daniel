@@ -369,34 +369,35 @@ a{
 }
 
 .membro {
-  background-color: #f25709;
-  border-radius: 8px;
+  background-color: #111;
+  color: #fff;
+  border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  padding: 30px;
   width: calc(33.33% - 40px); 
   box-sizing: border-box;
   text-align: center;
-  transition: transform 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .membro:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
 }
 
 .membro h2 {
-  color: #eae6e4;
-  font-size: 1.3rem;
+  color: #ffa533;
+  font-size: 1.6rem;
   margin-bottom: 10px;
 }
 
 .membro p {
-  color: #0a0000;
-  font-size: 1rem;
-  line-height: 1.4;
+  color: #fdfdfd;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 .foto-membro {
-  width: 100px;
+  width: 120px;
   height: 100px;
   object-fit: cover;
   border-radius: 50%;
