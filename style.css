@@ -358,3 +358,53 @@ a{
   margin-right: 8px;
   transform: scale(1.2);
 }
+
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.membro {
+  background-color: #f25709;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: calc(33.33% - 40px); 
+  box-sizing: border-box;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.membro:hover {
+  transform: translateY(-5px);
+}
+
+.membro h2 {
+  color: #eae6e4;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.membro p {
+  color: #0a0000;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.foto-membro {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.equipe {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
