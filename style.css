@@ -1,3 +1,11 @@
+.cabecalho,
+.cabecalho h1,
+.cabecalho h3,
+.cabecalho p,
+.menu a {
+    font-family: "Oswald", sans-serif;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -104,12 +112,12 @@ a{
     margin: 0 auto;
 }
 
-
-
 .banner .texto {
     display: flex;
     flex-direction: column;
     flex: 1;
+    align-items: center;
+    text-align: center;
 }
 
 .banner .texto h1 {
