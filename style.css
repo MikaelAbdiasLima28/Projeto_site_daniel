@@ -246,7 +246,7 @@ a{
 .menu ul {
   list-style: none;
   display: flex;
-  gap: 30px;
+  gap: 5px;
   margin: 0;
   padding: 0;
 }
@@ -266,7 +266,7 @@ a{
 .formulario {
   display: flex;
   flex-wrap: nowrap;
-  gap: 40px;
+  gap: 5px;
   align-items: flex-start;
 }
 
@@ -280,9 +280,11 @@ a{
   font-size: 20px;
 }
 
-.formulario label {
-  display: block;
-  margin: 10px 0 5px;
+.formulario {
+  display: flex; flex-wrap: nowrap;
+  gap: 5px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .formulario input[type="text"],
@@ -296,15 +298,15 @@ a{
 }
 
 .pagamento {
-  margin-top: 15px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction:column;
 }
 
 .linha-cartao {
   display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-top: 15px;
-  flex-wrap: wrap;
+  flex-direction: column;
+
 }
 
 .preco-box {
@@ -312,6 +314,7 @@ a{
   padding: 20px;
   border-radius: 20px;
   width: 200px;
+  box-shadow: #000;
   text-align: center;
 }
 
