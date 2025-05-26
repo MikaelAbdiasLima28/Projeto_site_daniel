@@ -29,8 +29,8 @@
 
   <!-- formulário -->
   <main class="container-flex">
-    <form class="formulario" action="aposcompra.html" method="get">
-      <div class="formulario-esquerda">
+    <div class="form-box">
+      <form class="formulario" action="aposcompra.html" method="get">
         <h2>Preencha seus dados abaixo:</h2>
 
         <label for="nome">Nome:</label>
@@ -65,17 +65,14 @@
         <label for="numero">Número do cartão:</label>
         <input type="text" id="numero" name="numero" pattern="\d{16}"
           title="Digite apenas números no formato XXXX XXXX XXXX XXXX" required />
-      </div>
 
-
-      <aside class="preco-box">
-        <h2>Valor: <span>49,99</span></h2>
-        <p>Após o pagamento, o ebook <br> estará disponível em seu <span class="email-vermelho">email</span></p>
-        <button class="btn-comprar" type="submit">Comprar</button>
-      </aside>
-    </form>
+        <aside class="preco-box">
+          <h2>Valor: <span>49,99</span></h2>
+          <p>Após o pagamento, o ebook <br> estará disponível em seu <span class="email-vermelho">email</span></p>
+          <button class="btn-comprar" type="submit">Comprar</button>
+        </aside>
+      </form>
+    </div>
   </main>
-
 </body>
-
 </html>
