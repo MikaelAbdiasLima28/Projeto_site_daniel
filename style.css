@@ -294,6 +294,7 @@ a{
   font-size: 16px;
   margin-bottom: 4px;
   align-self: flex-start;
+  color: #000000;
 }
 
 .formulario input[type="text"],
