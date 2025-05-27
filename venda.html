@@ -27,45 +27,86 @@
     <p>A sutil arte de ligar o f*da-se | <a href="venda.html"><strong>Compre o seu!</strong></a></p>
   </header>
 
-  <!-- formulário -->
   <main class="container-flex">
-    <div class="form-box">
+    <div id="pergunta-cadastro" class="form-box-duplo">
+      <form class="formulario" onsubmit="return false;">
+        <h2>Você já tem cadastro?</h2>
+        <div class="campo-form">
+          <label class="radio-label">
+            <input type="radio" name="temCadastro" value="sim" required> Sim
+          </label>
+          <label class="radio-label">
+            <input type="radio" name="temCadastro" value="nao" required> Não
+          </label>
+        </div>
+        <button class="btn-comprar" id="btn-avancar" type="button">Avançar</button>
+      </form>
+    </div>
+
+    <div id="cadastro-box" class="form-box-duplo" style="display:none;">
+      <form class="formulario" id="form-cadastro" onsubmit="return false;">
+        <h2>Cadastre-se para continuar</h2>
+        <div class="campo-form">
+          <label for="nome-cadastro">Nome:</label>
+          <input type="text" id="nome-cadastro" name="nome-cadastro" required />
+        </div>
+        <div class="campo-form">
+          <label for="email-cadastro">Email:</label>
+          <input type="email" id="email-cadastro" name="email-cadastro" required />
+        </div>
+        <div class="campo-form">
+          <label for="senha-cadastro">Senha:</label>
+          <input type="password" id="senha-cadastro" name="senha-cadastro" minlength="6" required />
+        </div>
+        <button class="btn-comprar" type="submit">Cadastrar</button>
+      </form>
+    </div>
+
+    <div id="compra-box" class="form-box-duplo" style="display:none;">
       <form class="formulario" action="aposcompra.html" method="get">
-        <h2>Preencha seus dados abaixo:</h2>
-
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required />
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-
-        <div class="pagamento">
-          <p class="pagamento-titulo">Escolha a sua forma de pagamento:</p>
-          <label class="radio-label">
-            <input type="radio" name="pagamento" value="credito" required />
-            <span>Crédito</span>
-          </label>
-          <label class="radio-label">
-            <input type="radio" name="pagamento" value="debito" required />
-            <span>Débito</span>
-          </label>
+        <div class="duas-colunas">
+          <fieldset class="bloco-form">
+            <legend>Dados Pessoais</legend>
+            <div class="campo-form">
+              <label for="nome">Nome:</label>
+              <input type="text" id="nome" name="nome" required />
+            </div>
+            <div class="campo-form">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+          </fieldset>
+          <fieldset class="bloco-form">
+            <legend>Dados do Cartão</legend>
+            <div class="campo-form">
+              <p class="pagamento-titulo">Escolha a sua forma de pagamento:</p>
+              <label class="radio-label">
+                <input type="radio" name="pagamento" value="credito" required />
+                <span>Crédito</span>
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="pagamento" value="debito" required />
+                <span>Débito</span>
+              </label>
+            </div>
+            <div class="campo-form">
+              <label for="nome-cartao">Nome no cartão:</label>
+              <input type="text" id="nome-cartao" name="nome-cartao" required />
+            </div>
+            <div class="campo-form">
+              <label for="validade">Validade:</label>
+              <input type="date" id="validade" name="validade" required />
+            </div>
+            <div class="campo-form">
+              <label for="cvv">CVV:</label>
+              <input type="text" id="cvv" name="cvv" pattern="[0-9]{3}" title="Digite 3 números (0,9)" required />
+            </div>
+            <div class="campo-form">
+              <label for="numero">Número do cartão:</label>
+              <input type="text" id="numero" name="numero" pattern="[0-9]{16}" title="Digite 16 números, sem espaço" required />
+            </div>
+          </fieldset>
         </div>
-
-        <div class="linha-cartao">
-          <label for="nome-cartao">Nome no cartão:</label>
-          <input type="text" id="nome-cartao" name="nome-cartao" required />
-
-          <label for="validade">Validade:</label>
-          <input type="date" id="validade" name="validade" required />
-        </div>
-
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv" pattern="\d{3}" title="Digite 3 números (0,9)" />
-
-        <label for="numero">Número do cartão:</label>
-        <input type="text" id="numero" name="numero" pattern="\d{16}"
-          title="Digite apenas números no formato XXXX XXXX XXXX XXXX" required />
-
         <aside class="preco-box">
           <h2>Valor: <span>49,99</span></h2>
           <p>Após o pagamento, o ebook <br> estará disponível em seu <span class="email-vermelho">email</span></p>
@@ -74,5 +115,33 @@
       </form>
     </div>
   </main>
+
+  <script>
+    const btnAvancar = document.getElementById('btn-avancar');
+    const perguntaCadastro = document.getElementById('pergunta-cadastro');
+    const cadastroBox = document.getElementById('cadastro-box');
+    const compraBox = document.getElementById('compra-box');
+    const formCadastro = document.getElementById('form-cadastro');
+
+    btnAvancar.onclick = function () {
+      const escolha = document.querySelector('input[name="temCadastro"]:checked');
+      if (!escolha) return;
+      if (escolha.value === 'sim') {
+        perguntaCadastro.style.display = 'none';
+        compraBox.style.display = 'block';
+      } else {
+        perguntaCadastro.style.display = 'none';
+        cadastroBox.style.display = 'block';
+      }
+    };
+
+    formCadastro.onsubmit = function () {
+      cadastroBox.style.display = 'none';
+      compraBox.style.display = 'block';
+      document.getElementById('nome').value = document.getElementById('nome-cadastro').value;
+      document.getElementById('email').value = document.getElementById('email-cadastro').value;
+      return false;
+    };
+  </script>
 </body>
 </html>

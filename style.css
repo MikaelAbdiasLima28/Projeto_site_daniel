@@ -214,18 +214,26 @@ a{
 }
 
 .mensagem-obrigado {
-  background-color: #ff922c;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
   text-align: center;
 }
+.mensagem-obrigado-box {
+  background: #0d0d0d;
+  border: 2px solid #17015d;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  padding: 40px 32px;
+  max-width: 500px;
+  margin: 0 auto;
+}
 
 .mensagem-obrigado h2 {
   font-size: 30px;
   font-weight: bold;
-  color: #000;
+  color: #fdfcfc;
   max-width: 600px;
 }
 
@@ -309,6 +317,62 @@ a{
 .formulario input[type="password"]:focus,
 .formulario input[type="date"]:focus {
   outline: 2px solid #ff922c;
+}
+.bloco-form {
+  background: #fff;
+  border: 2px solid #ff922c;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  padding: 28px 22px 22px 22px;
+  margin: 32px auto;
+  max-width: 400px;
+  min-width: 280px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-box-duplo {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .duas-colunas {
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+}
+.bloco-form legend {
+ color: #ff7b00;
+  font-weight: bold;
+  font-size: 1.2rem;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.campo-form {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 12px 14px 8px 14px;
+  margin-bottom: 18px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;;
+  gap: 4px;
+}
+.formulario input,
+.formulario select {
+  border: 2px solid #ff922c;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+  font-size: 1rem;
 }
 
 .btn-comprar {
@@ -442,4 +506,33 @@ a{
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 15px;
+}
+#pergunta-cadastro.form-box-duplo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 60vh; 
+}
+
+#pergunta-cadastro .formulario {
+  background: #0d0d0d;
+  border: 2px solid #010100;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  padding: 32px 28px 28px 28px;
+  min-width: 320px;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#pergunta-cadastro .btn-comprar {
+  display: block;
+  margin: 24px auto 0 auto;
+  width: 70%;
+  text-align: center;
 }
