@@ -374,6 +374,14 @@ a{
   background: #fff;
   font-size: 1rem;
 }
+.form-container {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 24px 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
 
 .btn-comprar {
   background: linear-gradient(90deg, #ff922c 60%, #ff7b00 100%);
@@ -535,4 +543,7 @@ a{
   margin: 24px auto 0 auto;
   width: 70%;
   text-align: center;
+}
+.rodape{
+  display: flex;
 }
