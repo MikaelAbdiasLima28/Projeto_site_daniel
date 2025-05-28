@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css"
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="venda.css">
 </head>
 
@@ -44,6 +44,21 @@
       </form>
     </div>
 
+    <div id="login-box" class="form-box-duplo" style="display:none;">
+      <form class="formulario" id="form-login" onsubmit="return false;">
+        <h2>Faça login para continuar</h2>
+        <div class="campo-form">
+          <label for="email-login">Email:</label>
+          <input type="email" id="email-login" name="email-login" required />
+        </div>
+        <div class="campo-form">
+          <label for="senha-login">Senha:</label>
+          <input type="password" id="senha-login" name="senha-login" minlength="6" required />
+        </div>
+        <button class="btn-comprar" type="submit">Entrar</button>
+      </form>
+    </div>
+
     <div id="cadastro-box" class="form-box-duplo" style="display:none;">
       <form class="formulario" id="form-cadastro" onsubmit="return false;">
         <h2>Cadastre-se para continuar</h2>
@@ -62,6 +77,7 @@
         <button class="btn-comprar" type="submit">Cadastrar</button>
       </form>
     </div>
+
 
     <div id="compra-box" class="form-box-duplo" style="display:none;">
       <form class="formulario" action="aposcompra.html" method="get">
@@ -121,15 +137,17 @@
     const btnAvancar = document.getElementById('btn-avancar');
     const perguntaCadastro = document.getElementById('pergunta-cadastro');
     const cadastroBox = document.getElementById('cadastro-box');
+    const loginBox = document.getElementById('login-box');
     const compraBox = document.getElementById('compra-box');
     const formCadastro = document.getElementById('form-cadastro');
+    const formLogin = document.getElementById('form-login');
 
     btnAvancar.onclick = function () {
       const escolha = document.querySelector('input[name="temCadastro"]:checked');
       if (!escolha) return;
       if (escolha.value === 'sim') {
         perguntaCadastro.style.display = 'none';
-        compraBox.style.display = 'block';
+        loginBox.style.display = 'block';
       } else {
         perguntaCadastro.style.display = 'none';
         cadastroBox.style.display = 'block';
@@ -141,6 +159,13 @@
       compraBox.style.display = 'block';
       document.getElementById('nome').value = document.getElementById('nome-cadastro').value;
       document.getElementById('email').value = document.getElementById('email-cadastro').value;
+      return false;
+    };
+
+    formLogin.onsubmit = function () {
+      loginBox.style.display = 'none';
+      compraBox.style.display = 'block';
+      document.getElementById('email').value = document.getElementById('email-login').value;
       return false;
     };
   </script>
