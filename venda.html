@@ -126,7 +126,7 @@
           </fieldset>
         </div>
         <aside class="preco-box">
-          <h2>Valor: <span>49,99</span></h2>
+          <h2>Valor: <span>35,90</span></h2>
           <p>Após o pagamento, o ebook <br> estará disponível em seu <span class="email-vermelho">email</span></p>
           <button class="btn-comprar" type="submit">Comprar</button>
         </aside>
@@ -134,42 +134,62 @@
     </div>
   </main>
 
-  <script>
-    const btnAvancar = document.getElementById('btn-avancar');
-    const perguntaCadastro = document.getElementById('pergunta-cadastro');
-    const cadastroBox = document.getElementById('cadastro-box');
-    const loginBox = document.getElementById('login-box');
-    const compraBox = document.getElementById('compra-box');
-    const formCadastro = document.getElementById('form-cadastro');
-    const formLogin = document.getElementById('form-login');
+<script>
+  const btnAvancar = document.getElementById('btn-avancar');
+  const perguntaCadastro = document.getElementById('pergunta-cadastro');
+  const cadastroBox = document.getElementById('cadastro-box');
+  const loginBox = document.getElementById('login-box');
+  const compraBox = document.getElementById('compra-box');
+  const formCadastro = document.getElementById('form-cadastro');
+  const formLogin = document.getElementById('form-login');
 
-    btnAvancar.onclick = function () {
-      const escolha = document.querySelector('input[name="temCadastro"]:checked');
-      if (!escolha) return;
-      if (escolha.value === 'sim') {
-        perguntaCadastro.style.display = 'none';
-        loginBox.style.display = 'block';
-      } else {
-        perguntaCadastro.style.display = 'none';
-        cadastroBox.style.display = 'block';
-      }
-    };
+  btnAvancar.onclick = function () {
+    const escolha = document.querySelector('input[name="temCadastro"]:checked');
+    if (!escolha) return;
+    if (escolha.value === 'sim') {
+      perguntaCadastro.style.display = 'none';
+      loginBox.style.display = 'block';
+    } else {
+      perguntaCadastro.style.display = 'none';
+      cadastroBox.style.display = 'block';
+    }
+  };
 
-    formCadastro.onsubmit = function () {
-      cadastroBox.style.display = 'none';
-      compraBox.style.display = 'block';
-      document.getElementById('nome').value = document.getElementById('nome-cadastro').value;
-      document.getElementById('email').value = document.getElementById('email-cadastro').value;
-      return false;
-    };
+  formCadastro.onsubmit = function () {
+    const nome = document.getElementById('nome-cadastro').value;
+    const email = document.getElementById('email-cadastro').value;
+    const senha = document.getElementById('senha-cadastro').value;
 
-    formLogin.onsubmit = function () {
+
+    localStorage.setItem('email', email);
+    localStorage.setItem('senha', senha);
+    localStorage.setItem('nome', nome);
+
+    cadastroBox.style.display = 'none';
+    compraBox.style.display = 'block';
+    document.getElementById('nome').value = nome;
+    document.getElementById('email').value = email;
+    return false;
+  };
+
+  formLogin.onsubmit = function () {
+    const emailLogin = document.getElementById('email-login').value;
+    const senhaLogin = document.getElementById('senha-login').value;
+
+    const emailSalvo = localStorage.getItem('email');
+    const senhaSalva = localStorage.getItem('senha');
+
+    if (emailLogin === emailSalvo && senhaLogin === senhaSalva) {
       loginBox.style.display = 'none';
       compraBox.style.display = 'block';
-      document.getElementById('email').value = document.getElementById('email-login').value;
-      return false;
-    };
-  </script>
+      document.getElementById('email').value = emailLogin;
+    } else {
+      alert('E-mail ou senha incorretos!');
+    }
+    return false;
+  };
+</script>
+
 <footer class="rodape">
   <p>&copy; 2025 eBook. Todos os direitos reservados.</p>
 </footer>

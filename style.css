@@ -169,7 +169,7 @@ a{
     box-sizing: border-box;
     max-width: 80%;
     gap: 3rem;
-    margin: 10% auto;
+    margin: 8px auto 0 auto;
 }
 
 .sobreparagrafo {
@@ -201,7 +201,7 @@ a{
 /* pagamento */
 
 .venda, .pagina-agradecimento {
-  font-family: sans-serif;
+  font-family: 'Oswald',sans-serif;
 }
 
 .mensagem-obrigado {
@@ -222,6 +222,7 @@ a{
 }
 
 .mensagem-obrigado h2 {
+  font-family: 'Oswald',Arial, sans-serif;
   font-size: 30px;
   font-weight: bold;
   color: #fdfcfc;
@@ -403,7 +404,7 @@ a{
 
 .preco-box h2,
 .preco-box p {
-  color: #ff922c;
+  color: #4ac90a;
 }
 
 .pagamento {
@@ -558,8 +559,7 @@ a{
   align-items: center;      
   text-align: center;
   padding: 20px;            
-  background-color: #111;   
-  color: white;             
+  color: black;             
 }
 
 .containercontato {
@@ -583,4 +583,93 @@ a{
 .labelcontato {
   font-size: medium;
   font-weight: bold;
+}
+
+.titulo-sobre {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 0px;
+}
+
+.form-container.containercontato {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    padding: 32px 28px;
+    max-width: 400px;
+    margin: 40px auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+#form-contato {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.labelcontato {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ff922c;
+    margin-bottom: 4px;
+}
+
+.form-container.containercontato input[type="text"],
+.form-container.containercontato input[type="email"],
+.form-container.containercontato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ff922c;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+}
+
+.form-container.containercontato input[type="text"]:focus,
+.form-container.containercontato input[type="email"]:focus,
+.form-container.containercontato textarea:focus {
+    border-color: #ff7b00;
+    outline: none;
+}
+
+.form-container.containercontato .btn.btn-primary {
+    background: linear-gradient(90deg, #ff922c 60%, #ff7b00 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 0;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.form-container.containercontato .btn.btn-primary:hover {
+    background: linear-gradient(90deg, #ff7b00 60%, #ff922c 100%);
+    color: #fff;
+    transform: scale(1.04);
+}
+
+.h1contato {
+    text-align: center;
+    color: #ff922c;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.pcontato {
+    text-align: center;
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 18px;
 }
