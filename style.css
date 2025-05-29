@@ -364,7 +364,7 @@ a{
   margin-bottom: 18px;
   box-shadow: none;
   display: flex;
-  flex-direction: column;;
+  flex-direction: row;
   gap: 4px;
 }
 .formulario input,
@@ -457,7 +457,7 @@ a{
   margin-bottom: 20px;
 }
 .radio-label {
-  display: inline-flex;
+  display: inline-flex  ;
   align-items: center;
   background-color: #fff;
   padding: 10px 15px;
